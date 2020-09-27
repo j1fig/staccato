@@ -1,9 +1,8 @@
 package cmd
 
 import (
+	"github.com/j1fig/staccato/midi"
 	"github.com/spf13/cobra"
-	// "github.com/j1fig/staccato/midi"
-	"log"
 )
 
 func init() {
@@ -14,6 +13,6 @@ var listCmd = &cobra.Command{
 	Use:   "list",
 	Short: "Lists available MIDI devices.",
 	Run: func(cmd *cobra.Command, args []string) {
-		log.Println("the list")
+		midi.List()
 	},
 }
