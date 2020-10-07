@@ -2,6 +2,7 @@ package midi
 
 import (
 	// "gitlab.com/gomidi/midi/reader"
+	"fmt"
 	"gitlab.com/gomidi/rtmididrv"
 	"log"
 )
@@ -18,6 +19,6 @@ func List() {
 	}
 
 	for _, i := range inputs {
-		log.Println(i.String())
+		fmt.Printf("port: %d\tname: %s", i.Number(), i.String())
 	}
 }
